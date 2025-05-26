@@ -105,21 +105,3 @@ Theory:
 DELETE FROM table (SQL) :-> 	A SQL command used to permanently remove a record from a database table—in this case, deleting a book by ID.
 
 <a href="..."> (HTML tag)	:->   Defines a hyperlink in HTML. Here, it's used to navigate back to the book list page (QSN8.php)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
