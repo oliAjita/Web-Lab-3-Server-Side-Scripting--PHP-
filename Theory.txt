@@ -1,0 +1,125 @@
+Question no 1:.............
+Introduction/Theory :
+-> The application uses a web form to collect principal, rate, and time inputs, validates them as numeric, and calculates either Simple or Compound Interest based on the button clicked.
+
+
+Syntax/Tag                       	Description                                                                                
+-------------------------------	--------------------------------------------------------------------------------------------
+is_numeric()                    	Checks if a variable is a valid number (int or float).
+(float) $_POST['value']        	Type casting — converts a string input to a float for accurate mathematical operations.     
+isset($_POST['simple'])        	Detects if the "Simple Interest" button was clicked.    
+pow(base, exponent)            	Raises a number to a power.                   
+round(number, decimals)        	Rounds a float to the given number of decimal places.                        
+<button type="submit" name="...">	HTML form element that submits form with a specific name to identify which button was clicked.
+
+Question no 2 Theory :.............
+
+Introduction :Web forms are HTML elements that allow users to input data and submit it to the server for processing. In PHP, server-side scripts are used to collect, validate, and process this form data.
+
+
+| Syntax / Function                           | Purpose                                                                  |
+| ------------------------------------------- | ------------------------------------------------------------------------ |
+| `error_reporting(E_ALL & E_STRICT);`        | Enables reporting of all PHP errors including strict standards.          |
+| `ini_set('display_errors', '1');`           | Displays errors in the browser. Useful for debugging.                    |
+| `require_once("./db_connection.php");`      | Includes the database connection file once to avoid redefinition errors. |
+| `$_SERVER['REQUEST_METHOD']`                | Checks if the form is submitted via POST.                                |
+| `$_POST['field']`                           | Fetches input values submitted via POST method.                          |
+| `trim()`                                    | Removes whitespace from beginning and end of a string.                   |
+| `count($err)`                               | Checks number of errors in the `$err` array.                             |
+| `try { ... } catch (Exception $ex) { ... }` | Handles exceptions (errors) during DB insert.                            |
+| `$connection->query($sql)`                  | Executes SQL query (insert in this case).                                |
+| `die()`                                     | Stops script execution and shows error message.                          |
+
+
+
+| Tag / Attribute                                     | Purpose                                                         |
+| --------------------------------------------------- | --------------------------------------------------------------- |
+| `<form action="" method="post">`                    | Defines a form that submits to the same page using POST method. |
+| `<input type="text">`, `<input type="email">`, etc. | Textboxes for user input (email, name, etc.).                   |
+| `<input type="radio">`                              | Radio buttons for gender selection.                             |
+| `<select>` with `<option>`                          | Dropdown list for faculty selection.                            |
+| `<span class="error">...</span>`                    | Displays error messages beside inputs.                          |
+
+
+
+
+
+Question no 3:
+
+Theory: 
+->This code implements login with session and cookie capabilities. When correct login credentials are provided by the user, a session is established. If "Remember Me" is selected, user details are also saved in cookies for 7 days. If the user logs in again in the future, if cookies exist, the user is automatically logged in and redirected to the dashboard.
+
+| **Syntax/Tag**                  | **Purpose**                                                                                  |
+| ------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$_COOKIE['name']`              | Retrieves the value of a cookie named `name`.  |
+| `setcookie(name, value, time)`  | Sets a cookie in the user's browser with a name, value, and expiry timestamp.                |
+| `header('location:...')`        | Sends an HTTP header to redirect the user to another page (e.g., `dashboard.php`).           |
+| `$connection = new mysqli(...)` | Establishes a new connection to the MySQL database using object-oriented MySQLi.             |
+| `$connection->query($sql)`      | Executes a SQL query using the established connection.                                       |
+| `$result->num_rows`             | Returns the number of rows returned by the SQL query.
+| `$result->fetch_assoc()`        | Fetches a result row as an associative array (column\_name => value).                        |
+
+
+
+Question no 4,5,6:
+Theory-> NO NEED
+
+
+
+
+Question no 7:
+Theory:
+-> This program creates a web form to add book records into a database. It takes title, author, publisher, edition, pages, price, publish date, and ISBN.By submitting ,it validates and inserts the data into a database table named `books`. 
+
+
+| Syntax/Function                                   Purpose
+| require_once("db_connection.php")            | Includes the database connection file only once.
+| intval($_POST['no_of_page'])                 | Converts the user input from string to an integer.
+
+
+Question no 8:
+Theory:
+->This PHP script connects to a database and retrieves all records from the books table. It then displays the records in a structured HTML table format. 
+
+| **Syntax/Tag**                                | **Purpose**
+------------------------------------------------------------------------------------------ |
+| `<?= $variable ?>`                            | PHP short echo tag. Equivalent to `<?php echo $variable; ?>`, used to output data.
+| `<?php if(...): ?> ... <?php endif; ?>`       | Alternative syntax for `if` statements, often used in HTML.          |
+| `<?php while(...): ?> ... <?php endwhile; ?>` | Alternative syntax for loops in template-style PHP code.
+
+
+Question no 9:
+Theory :
+->This PHP script edits and modifies the existing book record based on the book id.
+
+| **Syntax/Tag/Function**                                  | **Purpose**
+ input type="hidden"`                                      | An HTML input field not visible to the user, used to store
+                                                            the book ID so can be sent back on form submission for update.
+
+
+
+
+Question no 10:
+Theory:
+->This PHP script deletes the existing book record based on the book id.
+DELETE FROM table (SQL) :-> 	A SQL command used to permanently remove a record from a database table—in this case, deleting a book by ID.
+
+<a href="..."> (HTML tag)	:->   Defines a hyperlink in HTML. Here, it's used to navigate back to the book list page (QSN8.php).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
